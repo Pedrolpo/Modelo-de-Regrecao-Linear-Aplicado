@@ -3,8 +3,8 @@ import numpy as np
 from sklearn.linear_model import LinearRegression
 
 
-x = np.array([2, 4, 0, 2,0])
-y = np.array([ 5.4, 9.5, 8.1, 6.8, 7.2 ])
+x = np.array([0, 0, 0, 0,0])
+y = np.array([ 0, 0, 0, 0, 0 ])
 
 def resul_cor():
     corr_martrix = np.corrcoef(x,y)
@@ -30,7 +30,7 @@ resul_cor()
 
 
 
-x=x.reshape(5,1)
+x=x.reshape(int(len(x)),1)
 
 modelo = LinearRegression()
 modelo.fit(x,y)
